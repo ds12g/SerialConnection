@@ -3,9 +3,9 @@
 import javax.swing.JPanel;
 import javax.swing.BoxLayout;
 import javax.swing.Box;
-import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Component;
 
 public class SCBottomPanel{
 
@@ -18,7 +18,9 @@ public class SCBottomPanel{
 
     this.bottomPanel.setLayout(new BoxLayout(this.bottomPanel, BoxLayout.X_AXIS));
 
-    this.bottomPanel.setPreferredSize(new Dimension(660,740));
+    Dimension panelSize = new Dimension(660,740);
+
+    this.bottomPanel.setPreferredSize(panelSize);
     this.bottomPanel.setBackground(Color.BLACK);
 
     this.leftPanel = new SCLeftPanel();
@@ -26,11 +28,14 @@ public class SCBottomPanel{
 
     Dimension padding = new Dimension(20,0);
 
+    this.bottomPanel.add(Box.createVerticalStrut(20));
     this.bottomPanel.add(Box.createRigidArea(padding));
     this.bottomPanel.add(this.leftPanel.getLeftPanel());
     this.bottomPanel.add(Box.createRigidArea(padding));
     this.bottomPanel.add(this.rightPanel.getRightPanel());
     this.bottomPanel.add(Box.createRigidArea(padding));
+    this.bottomPanel.add(Box.createVerticalStrut(20));
+
 
   }
 

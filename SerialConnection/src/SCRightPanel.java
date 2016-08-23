@@ -8,7 +8,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Dimension;
-
+import java.awt.Component;
 public class SCRightPanel{
   private JPanel rightPanel;
   public JLabel testLabel;
@@ -18,6 +18,7 @@ public class SCRightPanel{
     this.rightPanel = new JPanel(null);
     this.rightPanel.setLayout(new BoxLayout(this.rightPanel, BoxLayout.Y_AXIS));
     this.testLabel = new JLabel("Test Label");
+    this.testLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
     Dimension preferredSize = new Dimension(300,700);
 
     this.rightPanel.setPreferredSize(preferredSize);

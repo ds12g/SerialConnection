@@ -4,9 +4,9 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.BoxLayout;
 import javax.swing.Box;
-import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Component;
 
 public class SCLeftPanel{
 
@@ -28,9 +28,10 @@ public class SCLeftPanel{
     this.leftPanel.setBackground(Color.CYAN);
 
     this.refreshButton = new JButton("Refresh");
-
+    this.refreshButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
     this.connectButton = new JButton("Connect");
+    this.connectButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
     this.leftPanel.add(Box.createRigidArea(buttonSpacing));
     this.leftPanel.add(this.refreshButton);
