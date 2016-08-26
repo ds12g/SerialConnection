@@ -24,6 +24,7 @@ public class SCMainPanel{
     this.bottomPanel = new SCBottomPanel();
     this.titlePanel = new SCTitlePanel();
 
+
     this.mainPanel.setBackground(Color.BLUE);
 
     this.mainPanel.add(Box.createRigidArea(new Dimension(0,20)));
