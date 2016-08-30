@@ -6,7 +6,7 @@ public class SCWindow{
   private JFrame window;
   private SCMainPanel mainPanel;
   private void createWindow(){
-    this.window = new JFrame("Serial Ports");
+    this.window = new JFrame("Serial Port Connection");
     this.mainPanel = new SCMainPanel();
     this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.window.add(this.mainPanel.getMainPanel());

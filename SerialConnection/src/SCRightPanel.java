@@ -15,30 +15,41 @@ public class SCRightPanel{
 
   private JPanel rightPanel;
   public JLabel testLabel;
+  public JPanel labelPanel;
+  private int numOfLabels;
 
   private void initRightPanel(){
 
     this.rightPanel = new JPanel(null);
+    this.labelPanel = new JPanel(null);
+    this.labelPanel.setLayout(new BoxLayout(this.labelPanel, BoxLayout.Y_AXIS));
+    this.labelPanel.setBackground(Color.RED);
+    this.labelPanel.setPreferredSize(new Dimension(250,250));
+    this.labelPanel.setMaximumSize(new Dimension(250,250));
+    this.labelPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+    this.labelPanel.setAlignmentY(Component.CENTER_ALIGNMENT);
     Dimension preferredSize = new Dimension(300,700);
     this.testLabel = new JLabel("Test Label");
 
 
     this.rightPanel.setLayout(new BoxLayout(this.rightPanel, BoxLayout.Y_AXIS));
     this.rightPanel.setPreferredSize(preferredSize);
-    this.rightPanel.setMinimumSize(preferredSize);
+  //  this.rightPanel.setMinimumSize(preferredSize);
     this.rightPanel.setMaximumSize(preferredSize);
     this.rightPanel.setBackground(Color.CYAN);
 
 
-    this.testLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-    this.testLabel.setPreferredSize(new Dimension(50,50));
-    this.testLabel.setBackground(Color.RED);
-    this.rightPanel.add(this.testLabel);
+    this.labelPanel.add(this.testLabel);
+
+    this.rightPanel.add(this.labelPanel);
   }
 
 
   public JPanel getRightPanel(){
     return this.rightPanel;
+  }
+  public JPanel getLabelPanel(){
+    return this.labelPanel;
   }
   public JLabel getTestLabel(){
     return this.testLabel;
